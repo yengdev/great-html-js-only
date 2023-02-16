@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/home.css" />
+		<title>HTML + JS</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Create new user -->
+			<div>
+				<button class="btn" onclick="displayModal()">Add user</button>
+			</div>
+			<div class="card hide">
+				<div class="title"></div>
+				<div class="caption d-flex">
+					<div class="username"></div>
+					<div class="created-date"></div>
+				</div>
+				<div class="actions">
+					<button class="warning btn status">Disabled</button>
+					<button class="error btn">Delete</button>
+				</div>
+			</div>
+			<div id="displayCard"></div>
+		</div>
+		<!-- Add New User Dialog -->
+		<div class="modal hide" id="createModal">
+			<div class="body" id="body">
+				<div class="title">Create new user</div>
+				<form class="form" id="registerForm">
+					<div>
+						<input type="text" placeholder="Name" name="name" />
+					</div>
+					<div>
+						<input type="text" placeholder="Username" name="username" />
+					</div>
+					<div>
+						<input type="password" placeholder="Password" name="password" />
+					</div>
+				</form>
+				<div>
+					<button class="btn mt-sm warning" onclick="onCreateUser()">Create user</button>
+					<button class="btn mt-sm" onclick="hideModal()">Hide Modal</button>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/helpers.js"></script>
+		<script src="scripts/fetch.js"></script>
+		<script src="scripts/users.js"></script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+	background-color: #edcbb1;
+}
+
+.show {
+	display: inherit !important;
+}
+.hide {
+	display: none !important;
+}
+
+.mt-sm {
+	margin-top: 14px;
+}
+
+.show-modal {
+	animation: slider 200ms;
+}
+@keyframes slider {
+	from {
+		display: inherit;
+		opacity: 0;
+	}
+	to {
+		/* transform: translateY(10px); */
+		opacity: 0;
+	}
+}
